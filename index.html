@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Empresa Hogar</title>
+    <!-- Enlace a la hoja de estilos de Bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="./css/style.css" />
+    <script
+      src="https://kit.fontawesome.com/29c3be7601.js"
+      crossorigin="anonymous"></script>
+  </head>
+  <body class="d-flex flex-column min-vh-100">
+    <header class="bg-light flex-shrink-0">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <a class="navbar-brand logo" href="#">
+            <img src="./assets/img/logo.jpg" alt="logo empresa" />
+          </a>
+          <!-- boton hamburgueas -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <!-- cuerpo offcanvas -->
+          <div
+            class="offcanvas offcanvas-end"
+            tabindex="-1"
+            id="offcanvasNavbar"
+            aria-labelledby="offcanvasNavbarLabel"
+          >
+            <div class="offcanvas-header">
+              <h3 class="offcanvas-title" id="offcanvasNavbarLabel">MENU</h3>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
+            </div>
+
+            <div class="offcanvas-body encabezado-offcanvas">
+              <ul class="navbar-nav flex-grow-1 pe-3 menu-offcanvas">
+                <li class="nav-item">
+                  <a
+                    class="nav-link active subrayado"
+                    aria-current="page"
+                    href="#"
+                    >INICIO</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./pages/empresa.html">EMPRESA</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./pages/tienda.html">TIENDA</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./pages/noticias.html">NOTICIAS</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./pages/contacto.html">CONTACTO</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <br />
+    <main id="fondoInicio" class="d-flex flex-column flex-fill">
+      <section class="imagenPrincipal flex-fill d-flex align-items-center justify-content-end">
+        <h2 class="tituloImagenPrincipal">Productos de calidad <br> buen precio</h2>        
+      </section>
+    </main>
+    <br />
+    <footer>
+      <div>
+        <h6 class="copy">&copy; Copyright 2025</h6>
+      </div>
+    </footer>
+    <!-- Enlace a los scripts de Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

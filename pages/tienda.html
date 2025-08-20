@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tienda</title>
+    <!-- Enlace a la hoja de estilos de Bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+    <script
+      src="https://kit.fontawesome.com/29c3be7601.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header class="bg-light flex-shrink-0">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <a class="navbar-brand logo" href="#">
+            <img src="../assets/img/logo.jpg" alt="logo empresa" />
+          </a>
+          <!-- boton hamburgueas -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <!-- cuerpo offcanvas -->
+          <div
+            class="offcanvas offcanvas-end"
+            tabindex="-1"
+            id="offcanvasNavbar"
+            aria-labelledby="offcanvasNavbarLabel"
+          >
+            <div class="offcanvas-header">
+              <h3 class="offcanvas-title" id="offcanvasNavbarLabel">MENU</h3>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
+            </div>
+
+            <div class="offcanvas-body encabezado-offcanvas">
+              <ul class="navbar-nav flex-grow-1 pe-3 menu-offcanvas">
+                <li class="nav-item">
+                  <a
+                    class="nav-link active subrayado"
+                    aria-current="page"
+                    href="../index.html"
+                    >INICIO</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../pages/empresa.html">EMPRESA</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">TIENDA</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../pages/noticias.html">NOTICIAS</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../pages/contacto.html">CONTACTO</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <br />
+    <main>
+      <section class="tiendaSection container-fluid mx-auto">
+        <h1>Tienda</h1>
+        <h3>Productos Destacados</h3>
+        <div class="row mx-auto">
+          <div class="col-12 col-lg-12">
+            <div
+              id="carouselExampleDark"
+              class="carousel carousel-dark slide"
+              style="width: 100%"
+            >
+              <div class="carousel-indicators">
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleDark"
+                  data-bs-slide-to="0"
+                  class="active"
+                  aria-current="true"
+                  aria-label="Slide 1"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleDark"
+                  data-bs-slide-to="1"
+                  aria-label="Slide 2"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleDark"
+                  data-bs-slide-to="2"
+                  aria-label="Slide 3"
+                ></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="10000">
+                  <img src="../assets/img/productos/aire-bgh.jpg""
+                  class="d-block w-100" alt="aire-bgh" />
+                </div>
+                <div class="carousel-item" data-bs-interval="2000">
+                  <img src="../assets/img/productos/amoladora-philco.jpg""
+                  class="d-block w-100" alt="amoladora-philco" />
+                </div>
+                <div class="carousel-item">
+                  <img src="../assets/img/productos/aspirador-philco.jpg""
+                  class="d-block w-100" alt="aspirador-philco" />
+                </div>
+              </div>
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselExampleDark"
+                data-bs-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselExampleDark"
+                data-bs-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Cards Productos disponibles -->
+        <h3>Productos Disponibles</h3>
+        <div class="row mx-auto">
+          <div class="col-12 col-lg-3">
+            <div class="card" style="width: 18rem">
+              <img
+                src="../assets/img/productos/tv-hitachi-32.jpg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Televisor Hitachi 32 Pulgadas</h5>
+                <p class="card-text">$260.999</p>
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modalTvHitachi32"
+                >
+                  Caracteristicas
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-3">
+            <div class="card" style="width: 18rem">
+              <img
+                src="../assets/img/productos/aire-bgh.jpg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">
+                  Aire Acondicionado BGH 3000 Frigorias
+                </h5>
+                <p class="card-text">$675.999</p>
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modalAireBgh3000"
+                >
+                  Caracteristicas
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-3">
+            <div class="card" style="width: 18rem">
+              <img
+                src="../assets/img/productos/amoladora-philco.jpg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Amoladora Philco MEPAM126</h5>
+                <p class="card-text">$65.999</p>
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modalAmoladoraPhilco"
+                >
+                  Caracteristicas
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-3">
+            <div class="card" style="width: 18rem">
+              <img
+                src="../assets/img/productos/aspirador-philco.jpg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Aspiradora Philco 94PHAST1821PI</h5>
+                <p class="card-text">$174.999</p>
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modalAspiradoraPhilco"
+                >
+                  Caracteristicas
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-3">
+            <div class="card" style="width: 18rem">
+              <img
+                src="../assets/img/productos/batidora-yelmo.jpeg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Batidora de Mano Yelmo mod.BM-1608</h5>
+                <p class="card-text">$52.899</p>
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modalBatidoraYelmo"
+                >
+                  Caracteristicas
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-3">
+            <div class="card" style="width: 18rem">
+              <img
+                src="../assets/img/productos/bordeadora-petri.jpg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Bordeadora Petri modelo P40</h5>
+                <p class="card-text">$95.999</p>
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modalBordeadoraPetri"
+                >
+                  Caracteristicas
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-3">
+            <div class="card" style="width: 18rem">
+              <img
+                src="../assets/img/productos/cocina-escorial-master.jpg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Cocina Escorial MASTER blanca</h5>
+                <p class="card-text">$373.749</p>
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modalCocinaEscorial"
+                >
+                  Caracteristicas
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-3">
+            <div class="card" style="width: 18rem">
+              <img
+                src="../assets/img/productos/lavarropa-automatico-drean.jpg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">
+                  Lavarropas Automatico Drean Next 6·06 ECO
+                </h5>
+                <p class="card-text">$734.274</p>
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modalLavarropaDrean"
+                >
+                  Caracteristicas
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- modales tienda -->
+        <div
+          class="modal fade"
+          id="modalTvHitachi32"
+          tabindex="-1"
+          aria-labelledby="modalTvHitachi32label"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h2 class="modal-title fs-5" id="modalTvHitachi32label">
+                  Televisor Hitachi 32 Pulgadas
+                </h2>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="close"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <p>
+                  Google Assistant incorporado. Cuenta con wi-fi y puerto de
+                  red. Posee 2 puertos HDMI. Equipado con conexión USB. Con
+                  conectividad mediante Bluetooth. Incluye control remoto.
+                  Dimensiones: 73.2cm de ancho, 43.1cm de alto y 8cm de
+                  profundidad.
+                </p>
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-bs-dismiss="modal"
+                >
+                  Cerrar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="modal fade"
+          id="modalAireBgh3000"
+          tabindex="-1"
+          aria-labelledby="modalAireBgh3000label"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h2 class="modal-title fs-5" id="modalAireBgh3000label">
+                  Aire Acondicionado Split Bgh Silent Air Bs35wchu Frío/calor
+                </h2>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="close"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <p>
+                  Descripción Eficiencia energética: A++ Capacidad frío/calor:
+                  3200W Capacidad frío/calor: 2800F Capacidad de refrigeración:
+                  10.921 BTU Capacidad de calefacción: 10.921 BTU Alimentación:
+                  220V Potencia máxima de calor: 1400W Potencia nominal de
+                  calor: 975W Nivel de ruido (unidad externa): 53 dB Nivel de
+                  ruido (unidad interna): 33/36/39 dB Modos de funcionamiento:
+                  Frío/calor Tecnología Inverter Tipo de refrigerante: R32 Modo
+                  ahorro de energía: Sí Apagado de luz display del panel
+                  frontal: Sí Auto Swing Horizontal: Sí Control de velocidad
+                  ventilador IDU: Sí Otras funciones: Apagado automático
+                  Deshumificación Encendido automático Enfriamiento rápido Sueño
+                  Ventilación MEDIDAS Unidad externa: Alto: 48.1 cm Ancho: 76.5
+                  cm Profundidad: 31 cm Peso: 7.5 kg Unidad interna: Alto: 25 cm
+                  Ancho: 77.7 cm Profundidad: 20.1 cm Peso: 10 kg ORIGEN
+                  Argentina
+                </p>
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-bs-dismiss="modal"
+                >
+                  Cerrar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="modal fade"
+          id="modalAmoladoraPhilco"
+          tabindex="-1"
+          aria-labelledby="modalAmoladoraPhilcolabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h2 class="modal-title fs-5" id="modalAmoladoraPhilcolabel">
+                  Amoladora Philco MEPAM126
+                </h2>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="close"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <p>
+                  La Amoladora Angular Philco MEPAM126 cuenta con: – Potencia de
+                  710W – Velocidad de 11000 RMP. Ø MAXIMO DISCO: 115mm
+                </p>
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-bs-dismiss="modal"
+                >
+                  Cerrar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="modal fade"
+          id="modalAspiradoraPhilco"
+          tabindex="-1"
+          aria-labelledby="modalAspiradoraPhilcolabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h2 class="modal-title fs-5" id="modalAspiradoraPhilcolabel">
+                  Aspiradora Philco 94PHAST1821PI
+                </h2>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="close"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <p>
+                  Garantia 12 meses. Fabricante Pilisar Marca PHILCO Tipo de
+                  Producto Aspiradoras Modelo PHAST1821PI Sensor Anticaídas No
+                  Filtro No Potencia 1200 watts Aspira agua Si Conexión WiFi No
+                  Cable retráctil No Anticolisión No Capacidad 18 Litros Tipo de
+                  bolsa Hepa Origen Argentina
+                </p>
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-bs-dismiss="modal"
+                >
+                  Cerrar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="modal fade"
+          id="modalBatidoraYelmo"
+          tabindex="-1"
+          aria-labelledby="modalBatidoraYelmolabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h2 class="modal-title fs-5" id="modalBatidoraYelmolabel">
+                  Batidora de Mano Yelmo mod.BM-1608
+                </h2>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="close"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <p>
+                  7 velocidades que permiten lograr tus mezclas más consistentes
+                  y homogéneas. Motor de 300W. Amplio rango de posibilidades:
+                  desde baja velocidad hasta punto nieve, merengue, etc. Mango
+                  de diseño ergonómico muy cómodo al agarre, brinda mayor
+                  control de la máquina. Ganchos amasadores y batidores.
+                  Expulsor para los accesorios amasador y batidor.
+                </p>
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-bs-dismiss="modal"
+                >
+                  Cerrar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="modal fade"
+          id="modalBordeadoraPetri"
+          tabindex="-1"
+          aria-labelledby="modalBordeadoraPetrilabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h2 class="modal-title fs-5" id="modalBordeadoraPetrilabel">
+                  Bordeadora Petri mod.P40
+                </h2>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="close"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <p>
+                  Potencia: 500W Motor montado: Rulemán – Buje Ancho de corte:
+                  300 mm Diámetro de tanza: 1,50 mm Tipo de carretel: Automático
+                  Uso: Semi Profesional Peso: 3,250 kg Empuñadura regulable
+                  Rulemanes SKF Todas nuestras bordeadoras llevan carrete
+                  automático de salida a dos tanzas. Innovador sistema de
+                  conexión interna, diseño exclusivo de PETRI. Empuñadura
+                  regulable: el manijón intermedio es regulable, esto permite
+                  que el usuario adapte la bordeadora para lograr una mejor
+                  postura de acuerdo a sus necesidades.
+                </p>
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-bs-dismiss="modal"
+                >
+                  Cerrar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="modal fade"
+          id="modalCocinaEscorial"
+          tabindex="-1"
+          aria-labelledby="modalCocinaEscoriallabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h2 class="modal-title fs-5" id="modalCocinaEscoriallabel">
+                  Cocina Escorial MASTER blanca
+                </h2>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="close"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <p>
+                  Color blanco con laterales y tapa de horno de vidrio en negro.
+                  Sistema Multigas (gas natural convertible a gas licuado).
+                  Peso: 32 kg. Puerta horno con doble Vidrio y doble reja de
+                  horno cromada. Superficies exteriores e interior del horno
+                  totalmente enlozados en polvo electrostático de fácil
+                  limpieza. Doble rejilla desmontable en plancha. 4 hornallas (3
+                  medianas y una grande). Válvula de seguridad en hornallas y
+                  horno. Quemadores de aluminio pulidos con tapa de acero
+                  esmaltada. Manija de horno y parrilla en acero pintado. Puerta
+                  de horno con bisagra desmontable. Cajón parrilla con puerta
+                  rebatible. Asadera. Eficiencia energética: Clase A. Color:
+                  Blanco Medidas: 93cm (Al) x 56cm (An) x 60cm (Pr) Puerta doble
+                  Vidrio – Doble reja cromada.
+                </p>
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-bs-dismiss="modal"
+                >
+                  Cerrar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="modal fade"
+          id="modalLavarropaDrean"
+          tabindex="-1"
+          aria-labelledby="modalLavarropaDreanlabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h2 class="modal-title fs-5" id="modalLavarropaDreanlabel">
+                  Lavarropas Automatico Drean Next 6·06 ECO
+                </h2>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="close"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <p>
+                  Lavarropas automático de 6 Kg – 600 RPM – Clasificación A+ –
+                  Sistema de lavado Europeo – Color Blanco – 29 Alternativas de
+                  Lavado con lavados rápidos de 30 y 45 minutos – Perilla
+                  bidireccional – Puerta Extra Grande – Tambor Elevado –
+                  Jabonera con Dispensers Específicos – Funciones especiales
+                  como: Autobalance – Hand Wash – Efecto Soft – Eco Wash –
+                  Control de Temperatura – Carga Autoadaptativa.
+                </p>
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-bs-dismiss="modal"
+                >
+                  Cerrar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <br />
+    <footer>
+      <div>
+        <h6 class="copy">&copy; Copyright 2025</h6>
+      </div>
+    </footer>
+    <!-- Enlace a los scripts de Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
