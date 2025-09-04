@@ -1,0 +1,203 @@
+@use "global";
+
+$color-fuente: #902323;
+$color-borde: #1095bd;
+$color-shadow: #11a5ea;
+$tamano-texto: 20px;
+
+.button-base {
+  border: 1px solid #09296e;
+  border-radius: 5px;
+  font-size: 16px;
+  &:hover {
+    background-color: #002ead;
+  }
+}
+
+// EXTEND
+.button-open {
+  @extend .button-base;
+  background-color: #007bff;
+  color: white;
+}
+
+//MIXIN
+@mixin flex($direccion, $justify, $align) {
+  display: flex;
+  flex-direction: $direccion;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+header {
+  nav.navbar {
+    width: 70%;
+    div.container-fluid {
+      a.logo {
+        width: 75px;
+        img {
+          width: 100%;
+        }
+      }
+      div.offcanvas {
+        div.encabezado-offcanvas {
+          width: 70%;
+          margin: 0 auto;
+
+          .menu-offcanvas {
+            justify-content: space-around;
+          }
+        }
+      }
+    }
+  }
+}
+
+footer {
+  div {
+    .copy {
+      font-size: $tamano-texto;
+      text-align: center;
+    }
+  }
+}
+
+/* ------ EMPRESA ------ */
+section.empresa {
+  margin: 5px;
+  .historia {
+    margin-bottom: 20px;
+    padding: 10px;
+    color: $color-fuente;
+    font-size: $tamano-texto;
+    font-weight: 150;
+    .empresaText {
+      text-align: justify;
+      font-family: "Roboto", sans-serif;
+      margin: auto;
+      line-height: 1;
+    }
+  }
+}
+
+/* -----------INICIO GRID AREA------------------ */
+.gridArea {
+  width: 100%;
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 250px;
+  grid-gap: 20px;
+  img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+    box-img:nth-child(1) {
+      grid-column-start: span 1;
+    }
+    box-img:nth-child(4) {
+      grid-row-start: span 1;
+    }
+  }
+}
+/* -----------FIN GRID AGREA-------------------- */
+
+/* ------- Contacto -------- */
+.formContacto {
+  form {
+    fieldset {
+      legend {
+        font-size: $tamano-texto;
+        font-weight: 600;
+        padding-left: 20px;
+      }
+
+      input {
+        height: 50%;
+        border-radius: 18px;
+        border: 1px solid $color-borde;
+        box-shadow: 2px 2px 2px $color-shadow;
+      }
+
+      textarea {
+        height: 100%;
+        border-radius: 20px;
+        border: 1px solid $color-borde;
+        box-shadow: 2px 2px 2px $color-shadow;
+      }
+
+      input[type="submit"] {
+        width: 30%;
+        align-items: center;
+        font-size: $tamano-texto;
+        font-weight: 500;
+        background-color: #00a2ff;
+        box-shadow: 2px 3px 1px rgb(0, 0, 0);
+        border: none;
+        margin-top: 10px;
+      }
+    }
+  }
+}
+
+/*---------- TIENDA ------------*/
+section.tiendaSection {
+  .row {
+    row-gap: 20px;
+    width: 75vw;
+    div.carousel {
+      .carousel-inner {
+        .carousel-item {
+          img {
+            height: 50vh;
+            object-fit: contain;
+          }
+        }
+      }
+    }
+    .card {
+      .card-body {
+        @include flex(column, space-around, center);
+      }
+      .card-img {
+        img {
+          display: block;
+          width: 100%;
+          height: auto;
+        }
+      }
+      &:hover {
+        .card-img {
+          transform: translateY(48px);
+          img {
+            transform: translate(-16px, -42px) scale(1.4);
+          }
+        }        
+      }
+    }
+  }
+}
+
+/* ---- empresa ------ */
+@media screen and (max-width: 800px) {
+  .gridArea {
+    width: 95%;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    grid-template-rows: 200px;
+    .box-img:nth-child(1) {
+      grid-column-start: span 1;
+    }
+  }
+}
+@media screen and (max-width: 500px) {
+  .gridArea {
+    width: 80%;
+    grid-template-columns: repeat(1, 1fr);
+    .box-img img {
+      height: 100px;
+    }
+  }
+}
