@@ -3,6 +3,7 @@
 $color-fuente: #902323;
 $color-borde: #1095bd;
 $color-shadow: #11a5ea;
+$color-gracias:#f4f4f4;
 $tamano-texto: 20px;
 
 .button-base {
@@ -31,10 +32,10 @@ $tamano-texto: 20px;
 
 header {
   nav.navbar {
-    width: 70%;
+    width: 90%;
     div.container-fluid {
       a.logo {
-        width: 75px;
+        width: 170px;
         img {
           width: 100%;
         }
@@ -174,12 +175,46 @@ section.tiendaSection {
           img {
             transform: translate(-16px, -42px) scale(1.4);
           }
-        }        
+        }
       }
     }
   }
 }
 
+/*---------- GRACIAS ------------*/
+section.graciasSection {
+  font-family: sans-serif;
+  @include flex(column, center, center);
+  min-height: 60vh;
+  background-color: $color-gracias;
+  text-align: center;
+  margin: 0;
+  .graciasContainer {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    p {
+      color: #555;
+      font-size: 1.1em;
+      line-height: 1.6;
+    }
+    .cta-button {
+      display: inline-block;
+      background-color: #007bff;
+      color: white;
+      padding: 12px 25px;
+      margin-top: 25px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-size: 1.1em;
+      transition: background-color 0.3s ease;
+    }
+    .cta-button:hover {
+      background-color: #0056b3;
+    }
+  }
+}
 /* ---- empresa ------ */
 @media screen and (max-width: 800px) {
   .gridArea {

@@ -3,7 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Empresa</title>
+    <title>Empresa Hogar | Nuestra Historia</title>
+    <meta name="description" content="En la pagina Empresa de Empresa Hogar puede ver nuestra historia y una descripcion de como trabajamos y el compromiso que tenemos con nuestros clientes">
+    <meta name="robots" content="index,follow">
     <!-- Enlace a la hoja de estilos de Bootstrap -->
     <link
       rel="stylesheet"
@@ -14,6 +16,7 @@
       src="https://kit.fontawesome.com/29c3be7601.js"
       crossorigin="anonymous"
     ></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   </head>
   <body class="d-flex flex-column min-vh-100">
     <header class="bg-light flex-shrink-0">
@@ -80,8 +83,8 @@
       </nav>
     </header>
     <br />
-    <main>
-      <section class="empresa">
+    <main>    
+      <section class="empresa">        
         <h1>Nuestra <span>Historia</span></h1>
         <div class="historia">
           <div class="empresaText">
@@ -96,44 +99,48 @@
               cuadrados de depósito y oficina. Además de nuestra tienda online
               donde podrás adquirir nuestros productos con envió a todo el país.
               Trabajamos con el objetivo de brindarles a nuestros clientes la
-              mejor experiencia de compra y satisfacción, ofreciéndoles la mejor
-              financiación y envíos a domicilio sin cargo en todas nuestras
-              sucursales.
+              mejor experiencia de compra y satisfacción.
             </p>
           </div>
         </div>        
       </section>
-      <section class="gridArea">
+      <section class="gridArea">        
         <img
           class="box-img"
           src="../assets/img/empresa/comercio1.jpg"
           alt="foto de comercio 1"
-        />
+          data-aos="zoom-out-up"
+        />        
         <img
           class="box-img"
           src="../assets/img/empresa/comercio2.jpg"
           alt="foto de comercio 2"
-        />
+          data-aos="zoom-out-up"
+        />        
         <img
           class="box-img"
           src="../assets/img/empresa/comercio3.jpg"
           alt="foto de comercio 3"
-        />
+          data-aos="zoom-out-up"
+        />        
         <img
           class="box-img"
           src="../assets/img/empresa/comercio6.jpg"
           alt="foto de comercio 4"
-        />
+          data-aos="zoom-out-up"
+        />        
         <img
           class="box-img"
           src="../assets/img/empresa/comercio5.jpg"
           alt="foto de comercio 5"
-        />
+          data-aos="zoom-out-up"
+        />        
         <img
           class="box-img"
           src="../assets/img/empresa/comercio4.jpg"
           alt="foto de comercio 6"
-        />                  
+          data-aos="zoom-out-up"
+        />             
       </section>
     </main>
     <br />
@@ -146,5 +153,7 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script> AOS.init(); </script>
   </body>
 </html>

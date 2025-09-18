@@ -24,10 +24,10 @@ h1 {
 }
 
 header nav.navbar {
-  width: 70%;
+  width: 90%;
 }
 header nav.navbar div.container-fluid a.logo {
-  width: 75px;
+  width: 170px;
 }
 header nav.navbar div.container-fluid a.logo img {
   width: 100%;
@@ -141,6 +141,44 @@ section.tiendaSection .row .card:hover .card-img {
 }
 section.tiendaSection .row .card:hover .card-img img {
   transform: translate(-16px, -42px) scale(1.4);
+}
+
+/*---------- GRACIAS ------------*/
+section.graciasSection {
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+  background-color: #f4f4f4;
+  text-align: center;
+  margin: 0;
+}
+section.graciasSection .graciasContainer {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+section.graciasSection .graciasContainer p {
+  color: #555;
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+section.graciasSection .graciasContainer .cta-button {
+  display: inline-block;
+  background-color: #007bff;
+  color: white;
+  padding: 12px 25px;
+  margin-top: 25px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 1.1em;
+  transition: background-color 0.3s ease;
+}
+section.graciasSection .graciasContainer .cta-button:hover {
+  background-color: #0056b3;
 }
 
 /* ---- empresa ------ */

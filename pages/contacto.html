@@ -3,7 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contacto</title>
+    <title>Empresa Hogar | Contacto</title>
+    <meta name="description" content="En la pagina Contacto de Empresa Hogar tenemos un formulario que seria un canal mas de comunicacion con nuestros clientes donde nos pueden indicar sus dudas o sugerencias para mejorar como comercio">
+    <meta name="robots" content="index,follow">
     <!-- Enlace a la hoja de estilos de Bootstrap -->
     <link
       rel="stylesheet"
@@ -86,23 +88,26 @@
         </div>
         <div class="row align-items-center">
             <div class="col-12 col-lg-8 ">
-                <form action="" method="post" enctype="application/x-www-form-urlencoded">
+                <form name="contacto" action="https://formsubmit.co/zoyo0119@gmail.com" method="POST">
                     <fieldset class="border rounded-3 p-4  ">
                         <legend class="float-none w-auto px-2">Completa el formulario</legend>
                         <div class="mb-3">
                             <label class="form-label" for="nombreyapellido">Nombre y Apellido</label>
-                            <input class="form-control" type="text" name="nombreyapellido" id="">
+                            <input class="form-control" type="text" name="nombreyapellido" id="nombre">
                         </div>
 
                         <div class="mb-3">
                             <label class="form-label" for="correo">Correo electronico</label>
-                            <input class="form-control" type="email" name="correo" id="">
+                            <input class="form-control" type="email" name="correo" id="correo">
                         </div>
 
                         <div class="mb-3">
                             <label class=" form-label " for="comentario">Dejanos un comentario y nos comunicaremos con vos</label>
-                            <textarea class="form-control  " name="comentario" id=""></textarea>
+                            <textarea class="form-control  " name="comentario" id="comentario"></textarea>
                         </div>
+
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_next" value="https://preentrega2Mario.vercel.app/gracias.html">
 
                         <input type="submit" value="ENVIAR">
                     </fieldset>
